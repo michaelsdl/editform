@@ -1,0 +1,191 @@
+/*Animation to appear the form*/
+@-webkit-keyframes appear{
+	from{
+		opacity: 0;
+	}
+
+	to{
+		opacity: 1;
+	}
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+@-moz-keyframes appear{
+	from{
+		opacity: 0;
+	}
+
+	to{
+		opacity: 1;
+	}
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+@-o-keyframes appear{
+	from{
+		opacity: 0;
+	}
+
+	to{
+		opacity: 1;
+	}
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+@keyframes appear{
+	from{
+		opacity: 0;
+	}
+
+	to{
+		opacity: 1;
+	}
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+#formid1, #formid2{
+	width: 300px;
+	margin: 5px auto; 
+	padding: 15px;
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	border-radius: 6px;
+
+	-webkit-transition: all 2s;
+	-moz-transition: all 2s;
+	-o-transition: all 2s;
+	transition: all 2s;
+
+	-webkit-animation: appear 2s;
+	-moz-animation: appear 2s;
+	-o-animation: appear 2s;
+	animation: appear 2s;
+}
+
+#formid1{
+	background: #fa0;
+	box-shadow: 1px 1px 2px #000;
+}
+
+#formTitleid{
+	color: #fff;
+	font-size: 1.8em;
+	font-family: Arial;
+	margin: 20px auto;
+	width: 150px;
+	text-align: center;
+	text-shadow: 1px 1px 1px #000;
+}
+
+/*hide the default radio buttons*/
+.rdbtnclass{
+	display: none;
+}
+
+/*make a new style to create a radio button*/
+.rdbtncustom:after{
+	content: "\25CF";
+	color: #fff;
+}
+.rdbtnclass:checked ~ .rdbtncustom:after{
+	color: #000;
+}
+
+label{
+	display: block;
+	margin: 15px 0px;
+	height: 50px;	
+}
+label:hover{
+	opacity: 0.7;
+}
+label input{
+	width: 100%;
+}
+
+.lblrd{
+	background: #fff;
+	border: 1px solid black;
+	width: 23px;
+	height: 23px;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	
+	text-align: center;
+	display: inline-block;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+.lblopt{
+	display: inline;
+	margin: 10px;
+}
+
+.divBtn{
+	width: 290px;
+	margin: 30px auto;
+}
+
+.divBtn input, #btnApply{
+	width: 100px;
+	height: 50px;
+	cursor: pointer;
+
+}
+
+.divBtn input{
+	margin: 0px 20px;
+}
+
+#btnApply{
+	display: block;
+	margin: auto;
+}
+
+#btnEdit{
+	float: right;
+	margin: 5px;
+	height: 40px;
+	cursor: pointer;
+
+	-webkit-box-shadow: 1px 1px 2px #000;
+	-moz-box-shadow: 1px 1px 2px #000;
+	-o-box-shadow: 1px 1px 2px #000;
+	box-shadow: 1px 1px 2px #000;
+	
+}
+
+.lblForm2{
+	display: block;
+}
+
+#lblSelect select{
+	width: 150px;
+	display: block;
+	margin: auto;
+}
+
+#lblFontSize, #lblFontColor, #lblTextShadow, #lblBoxShadow, #lblFontWeight{
+	display: none;
+}

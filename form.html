@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Form Validation</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="getValueSelected()">
+
+	<!-- Main Form -->
+	<form id="formid1">
+		<h1 id="formTitleid">Form Title</h1>
+		<label class="lbltxt">
+			Just Letters: <input type="text" onkeyup="justLetters()" required="true">
+		</label>
+
+		<label class="lblnumber">
+			Just Numbers: <input type="number" title="Just Numbers" required="true">
+		</label>
+
+		<label class="lblpass">
+			Password: <input type="password" onkeyup="passValid()" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="true">
+		</label>
+
+		<label class="lbldate">
+			Date: <input type="date" required="true">
+		</label>
+
+		<label class="lblprice">
+			Price: <input type="text" onkeyup="priceValid()" pattern="\d+(\.\d{2})?" required="true">
+		</label>
+		
+		<label class="lblopt">
+			Option1:
+			<label class="lblrd">
+				<input type="radio" name="rdbtn" id="rdbtnid" class="rdbtnclass" checked="true">
+				<span class="rdbtncustom"></span>
+			</label>
+		</label>
+		<label class="lblopt">
+			Option2:
+			<label class="lblrd">
+				<input type="radio" name="rdbtn" id="rdbtnid2" class="rdbtnclass">
+				<span class="rdbtncustom"></span>
+			</label>
+		</label>
+		<div class="divBtn">
+			<input class="btnReset" type="reset">
+			<input class="btnSubmit" type="submit" value="Submit">
+		</div>
+	</form>
+
+	<!-- Form to edit style of main form -->
+	<form id="formid2">
+		<label class="lblForm2" id="lblSelect">
+			<select onchange="getValueSelected()">
+				<option value="form">Form</option>
+				<option value="body">Body</option>
+				<option value="title">Title</option>
+				<option value="allRadioBtn">All Radio Buttons</option>
+				<option value="btns">Buttons</option>
+				<option value="allInputs">All Inputs</option>
+				<option value="justLetterInput">Just Letters Input</option>
+				<option value="justNumberInput">Just Numbers Input</option>
+				<option value="passInput">Password Input</option>
+				<option value="dateInput">Date Input</option>
+				<option value="priceInput">Price Input</option>
+
+			</select>
+		</label>
+
+		<label class="lblForm2" id="lblColor">
+			Bg Color: <input type="text" id="inputColor">
+		</label>
+
+		<label class="lblForm2" id="lblWidth">
+			Width: <input type="text" id="inputWidth">
+		</label>
+
+		<label class="lblForm2" id="lblHeight">
+			Height: <input type="text" id="inputHeight">
+		</label>
+
+		<label class="lblForm2" id="lblBorder">
+			Border: <input type="text" id="inputBorder" >	
+		</label>
+
+		<label class="lblForm2" id="lblBorderRadius">
+			Border-Radius: <input type="text" id="inputBorderRadius">	
+		</label>
+
+		<label class="lblForm2" id="lblFontSize">
+			Font Size: <input type="text" id="inputFontSize">	
+		</label>
+
+		<label class="lblForm2" id="lblFontColor">
+			Font Color: <input type="text" id="inputFontColor">	
+		</label>
+
+		<label class="lblForm2" id="lblTextShadow">
+			Text Shadow: <input type="text" id="inputTextShadow">	
+		</label>
+
+		<label class="lblForm2" id="lblBoxShadow">
+			Box Shadow: <input type="text" id="inputBoxShadow">	
+		</label>
+
+		<label class="lblForm2" id="lblFontWeight">
+			Font Weight: <input type="text" id="inputFontWeight">	
+		</label>
+
+		<!-- button to apply style to main form -->
+		<input type="button" id="btnApply" value="Apply" onclick="applyEdit()">
+	</form>
+</body>
+</html>
